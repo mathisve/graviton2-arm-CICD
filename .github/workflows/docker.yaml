@@ -21,7 +21,7 @@ jobs:
     -  
       name: Build and Push
       run: |
-        docker build
+        docker build \
         -t ${{ github.repository_owner }}/graviton2-arm-cicd:latest \
         --push \
         .
