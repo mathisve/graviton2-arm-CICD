@@ -24,4 +24,4 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         push: true
-        tags: ${{ github.repository_owner }}/graviton2-arm-cicd:latests
+        tags: ${{ github.repository_owner }}/graviton2-arm-cicd:latest
