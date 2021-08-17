@@ -19,9 +19,9 @@ jobs:
         username: ${{ secrets.DOCKER_HUB_USERNAME }}
         password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
     -  
-      name: Build and Push
-      run: |
-        docker build \
-        -t ${{ github.repository_owner }}/graviton2-arm-cicd:latest \
-        --push \
-        .
+      name: Build and push
+      id: docker_build
+      uses: docker/build-push-action@v2
+      with:
+        push: true
+        tags: ${{ github.repository_owner }}/graviton2-arm-cicd:latests
